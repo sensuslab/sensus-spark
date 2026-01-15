@@ -1,9 +1,9 @@
 ---
 title: "Usage Examples"
-description: "Code examples for common automation scenarios using the Bytebot REST API"
+description: "Code examples for common automation scenarios using the Spark REST API"
 ---
 
-This page provides practical examples of how to use the Bytebot REST API in different programming languages and scenarios.
+This page provides practical examples of how to use the Spark REST API in different programming languages and scenarios.
 
 ## Language Examples
 
@@ -494,7 +494,7 @@ async function fillForm() {
   await controlComputer("press_keys", { keys: ["tab"], press: "down" });
   await controlComputer("press_keys", { keys: ["tab"], press: "up" });
   await controlComputer("type_text", {
-    text: "This is an automated message sent using Bytebot's Computer Use API",
+    text: "This is an automated message sent using Spark's Computer Use API",
     delay: 30,
   });
 
@@ -515,15 +515,15 @@ fillForm().catch(console.error);
 
 ### Automation Framework Integration
 
-You can create a reusable automation framework with Bytebot:
+You can create a reusable automation framework with Spark:
 
 ```python
 import requests
 import time
 import json
 
-class BytebotDriver:
-    """A Selenium-like driver for Bytebot"""
+class SparkDriver:
+    """A Selenium-like driver for Spark"""
 
     def __init__(self, base_url="http://localhost:9990"):
         self.base_url = base_url
@@ -571,11 +571,11 @@ class BytebotDriver:
         self.control_computer("scroll", direction=direction, amount=amount)
 
 # Example usage
-driver = BytebotDriver()
+driver = SparkDriver()
 driver.open_browser({"x": 100, "y": 960})
 driver.navigate_to("https://example.com")
 driver.click_element({"x": 300, "y": 400})
-driver.type_text("Hello Bytebot!")
+driver.type_text("Hello Spark!")
 driver.press_key("enter")
 result = driver.take_screenshot()
 print(f"Screenshot captured: {result['success']}")

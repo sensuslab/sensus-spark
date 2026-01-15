@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Bytebot - Self-Hosted AI Desktop Agent",
+  "name": "Spark by Sensus Lab - Self-Hosted AI Desktop Agent",
   "colors": {
     "primary": "#000000",
     "light": "#fbfaf9",
@@ -94,8 +94,8 @@
     }
   },
   "logo": {
-    "light": "/logo/bytebot_transparent_logo_dark.svg",
-    "dark": "/logo/bytebot_transparent_logo_white.svg"
+    "light": "/logo/SparkLogo.svg",
+    "dark": "/logo/SparkLogo.svg"
   },
   "navbar": {
     "links": [
@@ -118,7 +118,7 @@
     }
   },
   "metadata": {
-    "og:title": "Bytebot - Self-Hosted AI Desktop Agent",
+    "og:title": "Spark by Sensus Lab - Self-Hosted AI Desktop Agent",
     "og:description": "Automate any computer task with natural language using your own AI desktop agent",
     "og:image": "/images/agent-architecture.png",
     "twitter:card": "summary_large_image"

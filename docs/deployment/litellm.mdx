@@ -1,11 +1,11 @@
 ---
 title: "LiteLLM Integration"
-description: "Use any LLM provider with Bytebot through LiteLLM proxy"
+description: "Use any LLM provider with Spark through LiteLLM proxy"
 ---
 
-# Connect Any LLM to Bytebot with LiteLLM
+# Connect Any LLM to Spark with LiteLLM
 
-LiteLLM acts as a unified proxy that lets you use 100+ LLM providers with Bytebot - including Azure OpenAI, AWS Bedrock, Anthropic, Hugging Face, Ollama, and more. This guide shows you how to set up LiteLLM with Bytebot.
+LiteLLM acts as a unified proxy that lets you use 100+ LLM providers with Spark - including Azure OpenAI, AWS Bedrock, Anthropic, Hugging Face, Ollama, and more. This guide shows you how to set up LiteLLM with Spark.
 
 ## Why Use LiteLLM?
 
@@ -24,16 +24,16 @@ LiteLLM acts as a unified proxy that lets you use 100+ LLM providers with Bytebo
   </Card>
 </CardGroup>
 
-## Quick Start with Bytebot's Built-in LiteLLM Proxy
+## Quick Start with Spark's Built-in LiteLLM Proxy
 
-Bytebot includes a pre-configured LiteLLM proxy service that makes it easy to use any LLM provider. Here's how to set it up:
+Spark includes a pre-configured LiteLLM proxy service that makes it easy to use any LLM provider. Here's how to set it up:
 
 <Steps>
   <Step title="Use Docker Compose with Proxy">
     The easiest way is to use the proxy-enabled Docker Compose file:
     
     ```bash
-    # Clone Bytebot
+    # Clone Spark
     git clone https://github.com/bytebot-ai/bytebot.git
     cd bytebot
     
@@ -45,7 +45,7 @@ Bytebot includes a pre-configured LiteLLM proxy service that makes it easy to us
     GEMINI_API_KEY=your-key-here
     EOF
     
-    # Start Bytebot with LiteLLM proxy
+    # Start Spark with LiteLLM proxy
     docker-compose -f docker/docker-compose.proxy.yml up -d
     ```
     
@@ -89,10 +89,10 @@ Bytebot includes a pre-configured LiteLLM proxy service that makes it easy to us
   </Step>
   
   <Step title="Verify Models are Available">
-    The Bytebot agent automatically queries the proxy for available models:
+    The Spark agent automatically queries the proxy for available models:
     
     ```bash
-    # Check available models through Bytebot API
+    # Check available models through Spark API
     curl http://localhost:9991/tasks/models
     
     # Or directly from LiteLLM proxy
@@ -109,7 +109,7 @@ Bytebot includes a pre-configured LiteLLM proxy service that makes it easy to us
 
 ```mermaid
 graph LR
-    A[Bytebot UI] -->|Select Model| B[Bytebot Agent]
+    A[Spark UI] -->|Select Model| B[Spark Agent]
     B -->|BYTEBOT_LLM_PROXY_URL| C[LiteLLM Proxy :4000]
     C -->|Route Request| D[Anthropic API]
     C -->|Route Request| E[OpenAI API]  
@@ -120,11 +120,11 @@ graph LR
 ### Key Components
 
 1. **bytebot-llm-proxy Service**: A LiteLLM instance running in Docker that:
-   - Runs on port 4000 within the Bytebot network
+   - Runs on port 4000 within the Spark network
    - Uses the config from `packages/bytebot-llm-proxy/litellm-config.yaml`
    - Inherits API keys from environment variables
 
-2. **Agent Integration**: The Bytebot agent:
+2. **Agent Integration**: The Spark agent:
    - Checks for `BYTEBOT_LLM_PROXY_URL` environment variable
    - If set, queries the proxy at `/model/info` for available models
    - Routes all LLM requests through the proxy
@@ -252,7 +252,7 @@ router_settings:
   model_group_alias:
     "smart-model": ["primary-model", "fallback-model"]
   
-# Use "smart-model" in Bytebot config
+# Use "smart-model" in Spark config
 ```
 
 ### Cost Controls
@@ -329,7 +329,7 @@ docker run -d \
   ghcr.io/berriai/litellm:main \
   --config /app/config.yaml
 
-# Then start Bytebot with:
+# Then start Spark with:
 export BYTEBOT_LLM_PROXY_URL=http://localhost:4000
 docker-compose up -d
 ```
@@ -360,7 +360,7 @@ config:
   general_settings:
     master_key: ${LITELLM_MASTER_KEY}
 
-# Then in Bytebot values.yaml:
+# Then in Spark values.yaml:
 agent:
   openai:
     enabled: true
@@ -409,7 +409,7 @@ general_settings:
   </Accordion>
   
   <Accordion title="Authentication errors">
-    Verify master key in both LiteLLM and Bytebot:
+    Verify master key in both LiteLLM and Spark:
     ```bash
     # Test LiteLLM
     curl http://localhost:4000/v1/chat/completions \
@@ -431,7 +431,7 @@ general_settings:
 
 ## Best Practices
 
-### Model Selection for Bytebot
+### Model Selection for Spark
 
 Choose models with strong vision capabilities for best results:
 
@@ -456,7 +456,7 @@ Choose models with strong vision capabilities for best results:
 ### Performance Optimization
 
 ```yaml
-# Optimize for Bytebot workloads
+# Optimize for Spark workloads
 router_settings:
   routing_strategy: "latency-based"
   cooldown_time: 60  # Seconds before retrying failed provider
@@ -506,5 +506,5 @@ general_settings:
 </CardGroup>
 
 <Note>
-  **Pro tip:** Start with a single provider, then add more as needed. LiteLLM makes it easy to switch or combine models without changing Bytebot configuration.
+  **Pro tip:** Start with a single provider, then add more as needed. LiteLLM makes it easy to switch or combine models without changing Spark configuration.
 </Note>

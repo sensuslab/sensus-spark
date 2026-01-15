@@ -1,11 +1,11 @@
 ---
 title: "Helm Deployment"
-description: "Deploy Bytebot on Kubernetes using Helm charts"
+description: "Deploy Spark on Kubernetes using Helm charts"
 ---
 
-# Deploy Bytebot on Kubernetes with Helm
+# Deploy Spark on Kubernetes with Helm
 
-Helm provides a simple way to deploy Bytebot on Kubernetes clusters.
+Helm provides a simple way to deploy Spark on Kubernetes clusters.
 
 ## Prerequisites
 
@@ -40,7 +40,7 @@ Helm provides a simple way to deploy Bytebot on Kubernetes clusters.
     ```
   </Step>
   
-  <Step title="Install Bytebot">
+  <Step title="Install Spark">
     ```bash
     helm install bytebot ./helm \
       --namespace bytebot \
@@ -49,7 +49,7 @@ Helm provides a simple way to deploy Bytebot on Kubernetes clusters.
     ```
   </Step>
   
-  <Step title="Access Bytebot">
+  <Step title="Access Spark">
     ```bash
     # Port-forward for local access
     kubectl port-forward -n bytebot svc/bytebot-ui 9992:9992
@@ -111,7 +111,7 @@ ui:
     tls: true
 ```
 
-## Accessing Bytebot
+## Accessing Spark
 
 ### Local Access (Recommended)
 
@@ -183,7 +183,7 @@ helm upgrade bytebot ./helm -n bytebot -f values.yaml
 ## Uninstalling
 
 ```bash
-# Remove Bytebot
+# Remove Spark
 helm uninstall bytebot -n bytebot
 
 # Clean up namespace
@@ -273,10 +273,10 @@ kubectl delete namespace bytebot
 
 <CardGroup cols={2}>
   <Card title="API Reference" icon="code" href="/api-reference/introduction">
-    Integrate Bytebot with your applications
+    Integrate Spark with your applications
   </Card>
   <Card title="LiteLLM Integration" icon="plug" href="/deployment/litellm">
-    Use any LLM provider with Bytebot
+    Use any LLM provider with Spark
   </Card>
 </CardGroup>
 

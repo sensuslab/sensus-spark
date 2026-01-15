@@ -1,17 +1,17 @@
 ---
 title: 'Task UI'
-description: 'Documentation for the Bytebot Task UI'
+description: 'Documentation for the Spark Task UI'
 ---
 
-## Bytebot Task UI
+## Spark Task UI
 
-The Bytebot Task UI provides a web-based interface for interacting with the Bytebot agent system. It combines a action feed with an embedded noVNC viewer, allowing you to watch it perform task on the desktop in real-time.
+The Spark Task UI provides a web-based interface for interacting with the Spark agent system. It combines a action feed with an embedded noVNC viewer, allowing you to watch it perform task on the desktop in real-time.
 
-<img src="/static/chat-ui-overview.png" alt="Bytebot Task Detail" className="w-full max-w-4xl" />
+<img src="/static/chat-ui-overview.png" alt="Spark Task Detail" className="w-full max-w-4xl" />
 
 ## Accessing the UI
 
-When running the full Bytebot agent system, the Task UI is available at:
+When running the full Spark agent system, the Task UI is available at:
 
 ```
 http://localhost:9992
@@ -74,7 +74,7 @@ While primarily for viewing, the desktop panel allows:
 
 ## Message Types
 
-The task interface displays different types of messages based on Bytebot's content block structure:
+The task interface displays different types of messages based on Spark's content block structure:
 
 - **User Messages**: Your instructions and queries
 - **Assistant Messages**: Responses from the agent, which may include:
@@ -115,7 +115,7 @@ interface ImageContentBlock extends MessageContentBlock {
 
 ## Technical Details
 
-The Bytebot Task UI is built with:
+The Spark Task UI is built with:
 
 - **Next.js**: React framework for the frontend
 - **Tailwind CSS**: For styling
@@ -128,7 +128,7 @@ The Bytebot Task UI is built with:
 
 If you experience connection issues:
 
-1. Ensure all Bytebot services are running
+1. Ensure all Spark services are running
 2. Check that ports 9990, 9991, and 9992 are accessible
 3. Try refreshing the browser
 4. Check browser console for error messages
@@ -137,7 +137,7 @@ If you experience connection issues:
 
 If the desktop viewer is not displaying:
 
-1. Ensure the Bytebot container is running
+1. Ensure the Spark container is running
 2. Check that the noVNC service is accessible at port 9990
 
 ### Message Display Issues

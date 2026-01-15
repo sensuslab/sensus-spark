@@ -5,7 +5,7 @@ description: "Get your AI desktop agent running in 2 minutes"
 
 # Choose Your Deployment Method
 
-Bytebot can be deployed in several ways depending on your needs:
+Spark can be deployed in several ways depending on your needs:
 
 <Tabs>
   <Tab title="Railway (Easiest)">
@@ -15,7 +15,7 @@ Bytebot can be deployed in several ways depending on your needs:
 
 <Steps>
   <Step title="Visit the Template">
-    Click the Deploy Now button in the Bytebot template on Railway.
+    Click the Deploy Now button in the Spark template on Railway.
   </Step>
   <Step title="Add Anthropic Key">
     Enter either your `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, or `GEMINI_API_KEY` for the bytebot-agent resource.
@@ -67,7 +67,7 @@ Get your self-hosted AI desktop agent running with just three commands:
 
 This starts all four services:
 
-- **Bytebot Desktop**: Containerized Linux environment
+- **Spark Desktop**: Containerized Linux environment
 - **AI Agent**: LLM-powered task processor (supports Claude, GPT, or Gemini)
 - **Chat UI**: Web interface for interaction
 - **Database**: PostgreSQL for persistence
@@ -75,10 +75,10 @@ This starts all four services:
 </Step>
 
 <Step title="Open the Chat Interface">
-Navigate to [http://localhost:9992](http://localhost:9992) to access the Bytebot UI.
+Navigate to [http://localhost:9992](http://localhost:9992) to access the Spark UI.
 
 **Two ways to interact:**
-1. **Tasks**: Enter task descriptions to have Bytebot work autonomously
+1. **Tasks**: Enter task descriptions to have Spark work autonomously
 2. **Desktop**: Direct access to the virtual desktop for manual control
 
 Try asking:
@@ -100,7 +100,7 @@ Try asking:
 You now have a complete AI desktop automation system with:
 
 <Note>
-  **🔐 Password Manager Support**: Bytebot can handle authentication automatically when you install a password manager extension. See our [password management guide](/guides/password-management) for setup instructions.
+  **🔐 Password Manager Support**: Spark can handle authentication automatically when you install a password manager extension. See our [password management guide](/guides/password-management) for setup instructions.
 </Note>
 
 <CardGroup cols={2}>
@@ -132,7 +132,7 @@ You now have a complete AI desktop automation system with:
 
 ## 🚀 Your First Tasks
 
-Now let's see Bytebot in action! Try these example tasks:
+Now let's see Spark in action! Try these example tasks:
 
 ### Simple Tasks (Test the Basics)
 <CardGroup cols={2}>
@@ -267,7 +267,7 @@ curl -X POST http://localhost:9990/computer-use \
 # Type text
 curl -X POST http://localhost:9990/computer-use \
   -H "Content-Type: application/json" \
-  -d '{"action": "type_text", "text": "Hello, Bytebot!"}'
+  -d '{"action": "type_text", "text": "Hello, Spark!"}'
 ```
 
 ## Troubleshooting
@@ -308,13 +308,13 @@ curl -X POST http://localhost:9990/computer-use \
     Learn how to create and manage tasks effectively
   </Card>
   <Card title="Takeover Mode" icon="hand" href="/guides/takeover-mode">
-    Take control when you need to guide Bytebot
+    Take control when you need to guide Spark
   </Card>
   <Card title="LiteLLM Integration" icon="plug" href="/deployment/litellm">
-    Use any LLM provider with Bytebot
+    Use any LLM provider with Spark
   </Card>
   <Card title="API Integration" icon="code" href="/api-reference/introduction">
-    Automate Bytebot with your applications
+    Automate Spark with your applications
   </Card>
 </CardGroup>
 

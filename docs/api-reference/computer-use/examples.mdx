@@ -1,6 +1,6 @@
 ---
 title: "Computer Use API Examples"
-description: "Code examples for common automation scenarios using the Bytebot API"
+description: "Code examples for common automation scenarios using the Spark API"
 ---
 
 ## Basic Examples
@@ -185,7 +185,7 @@ await controlComputer("click_mouse", { button: "left" });
 
     // Type some text
     await controlComputer("type_text", {
-      text: "This is an automated test using Node.js and Bytebot",
+      text: "This is an automated test using Node.js and Spark",
       delay: 30
     });
 
@@ -281,7 +281,7 @@ def write_file(path, content):
     return response.json()
 
 # Write a text file
-result = write_file("/home/user/hello.txt", "Hello, Bytebot!")
+result = write_file("/home/user/hello.txt", "Hello, Spark!")
 print(result)  # {'success': True, 'message': 'File written successfully...'}
 
 # Write to desktop (relative path)
@@ -472,7 +472,7 @@ async function fillForm() {
 
   // Type message
   await controlComputer("type_text", {
-    text: "This is an automated message sent using Bytebot's Computer Use API",
+    text: "This is an automated message sent using Spark's Computer Use API",
     delay: 30,
   });
 
@@ -492,14 +492,14 @@ The Computer Use API can be integrated with popular testing frameworks:
 
 ### Selenium Alternative
 
-Bytebot can serve as an alternative to Selenium for web testing:
+Spark can serve as an alternative to Selenium for web testing:
 
 ```python
 import requests
 import time
 import json
 
-class BytebotWebDriver:
+class SparkWebDriver:
     def __init__(self, base_url="http://localhost:9990"):
         self.base_url = base_url
 
@@ -536,9 +536,9 @@ class BytebotWebDriver:
         return self.control_computer("screenshot")
 
 # Usage example
-driver = BytebotWebDriver()
+driver = SparkWebDriver()
 driver.open_browser({"x": 100, "y": 960})
 driver.navigate_to("https://example.com")
 driver.click_element({"x": 300, "y": 400})
-driver.type_text("Hello Bytebot!")
+driver.type_text("Hello Spark!")
 ```

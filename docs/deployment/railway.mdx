@@ -1,9 +1,9 @@
 ---
-title: "Deploying Bytebot on Railway"
-description: "Comprehensive guide to deploying the full Bytebot stack on Railway using the official 1-click template"
+title: "Deploying Spark on Railway"
+description: "Comprehensive guide to deploying the full Spark stack on Railway using the official 1-click template"
 ---
 
-> **TL;DR –** Click the button below, add your AI API key (Anthropic, OpenAI, or Google), and your personal Bytebot instance will be live in ~2 minutes.
+> **TL;DR –** Click the button below, add your AI API key (Anthropic, OpenAI, or Google), and your personal Spark instance will be live in ~2 minutes.
 
 [![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/bytebot?referralCode=L9lKXQ)
 
@@ -11,7 +11,7 @@ description: "Comprehensive guide to deploying the full Bytebot stack on Railway
 
 ## Why Railway?
 
-Railway provides a zero-ops PaaS experience with private networking and per-service logs that perfectly fits Bytebot’s multi-container architecture. The official template wires every service together using the latest container images pushed to the `edge` branch.
+Railway provides a zero-ops PaaS experience with private networking and per-service logs that perfectly fits Spark’s multi-container architecture. The official template wires every service together using the latest container images pushed to the `edge` branch.
 
 ---
 
@@ -45,7 +45,7 @@ All internal traffic flows through Railway’s [private networking](https://docs
   <Step title="3. Kick off the Deployment">
     Press **Deploy**. Railway will pull the pre-built images, create the Postgres database and link all services on a private network.
   </Step>
-  <Step title="4. Launch Bytebot">
+  <Step title="4. Launch Spark">
     When the build logs show *"bytebot-ui: ready"*, click the generated URL (e.g. `https://bytebot-ui-prod.up.railway.app`). You should see the task interface. Create a task and watch the desktop stream!  
     _Tip: You can tail logs for each service from the Railway dashboard._
   </Step>

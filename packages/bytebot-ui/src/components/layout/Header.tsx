@@ -35,9 +35,9 @@ export function Header() {
     const baseClasses =
       "flex items-center gap-1.5 transition-colors px-3 py-1.5 rounded-lg";
     const activeClasses =
-      "bg-bytebot-bronze-light-a3 text-bytebot-bronze-light-12";
+      "bg-spark-bronze-light-a3 text-spark-bronze-light-12";
     const inactiveClasses =
-      "text-bytebot-bronze-dark-9 hover:bg-bytebot-bronze-light-a1 hover:text-bytebot-bronze-light-12";
+      "text-spark-bronze-dark-9 hover:bg-spark-bronze-light-a1 hover:text-spark-bronze-light-12";
 
     return `${baseClasses} ${isActive(path) ? activeClasses : inactiveClasses}`;
   };
@@ -49,12 +49,8 @@ export function Header() {
         <div>
           {mounted ? (
             <Image
-              src={
-                resolvedTheme === "dark"
-                  ? "/bytebot_transparent_logo_white.svg"
-                  : "/bytebot_transparent_logo_dark.svg"
-              }
-              alt="Bytebot Logo"
+              src="/SparkLogo.svg"
+              alt="Spark by Sensus Lab Logo"
               width={100}
               height={30}
               className="h-8 w-auto"
@@ -63,7 +59,7 @@ export function Header() {
             <div className="h-8 w-[110px]" />
           )}
         </div>
-        <div className="border-bytebot-bronze-dark-11 h-5 border border-l-[0.5px]"></div>
+        <div className="border-spark-bronze-dark-11 h-5 border border-l-[0.5px]"></div>
         <div className="flex items-center gap-2">
           <Link href="/" className={getLinkClasses("/")}>
             <HugeiconsIcon icon={Home01Icon} className="h-4 w-4" />

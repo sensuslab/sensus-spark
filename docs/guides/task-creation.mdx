@@ -3,13 +3,13 @@ title: "Task Creation & Management"
 description: "Master the art of creating effective tasks and managing them through completion"
 ---
 
-# Creating and Managing Tasks in Bytebot
+# Creating and Managing Tasks in Spark
 
-This guide will walk you through everything you need to know about creating tasks that Bytebot can execute effectively, and managing them through their lifecycle.
+This guide will walk you through everything you need to know about creating tasks that Spark can execute effectively, and managing them through their lifecycle.
 
 ## Understanding Tasks
 
-A task is any job you want Bytebot to complete. Tasks can be:
+A task is any job you want Spark to complete. Tasks can be:
 
 - **Simple**: "Log in to GitHub" or "Visit example.com" (uses one program)
 - **Complex**: "Download invoices from email and save them to a folder" (uses multiple programs)
@@ -18,19 +18,19 @@ A task is any job you want Bytebot to complete. Tasks can be:
 
 ## Working with Files
 
-Bytebot has powerful file handling capabilities that make it perfect for document processing and data analysis tasks.
+Spark has powerful file handling capabilities that make it perfect for document processing and data analysis tasks.
 
 ### Uploading Files with Tasks
 
 When creating a task, you can upload files that will be automatically saved to the desktop instance. This is incredibly useful for:
 
-- **Document Processing**: Upload PDFs, spreadsheets, or documents for Bytebot to analyze
+- **Document Processing**: Upload PDFs, spreadsheets, or documents for Spark to analyze
 - **Data Analysis**: Provide CSV files or datasets for processing
 - **Template Filling**: Upload forms or templates that need to be completed
 - **Batch Operations**: Upload multiple files for bulk processing
 
 <Note>
-  **Game Changer**: Bytebot can read entire files, including PDFs, directly into the LLM context. This means it can process large amounts of data quickly and understand complex documents without manual extraction.
+  **Game Changer**: Spark can read entire files, including PDFs, directly into the LLM context. This means it can process large amounts of data quickly and understand complex documents without manual extraction.
 </Note>
 
 ### File Upload Examples
@@ -92,7 +92,7 @@ When creating a task, you can upload files that will be automatically saved to t
 ### Using the Web UI
 
 <Steps>
-  <Step title="Open Bytebot UI">
+  <Step title="Open Spark UI">
     Navigate to `http://localhost:9992`
   </Step>
   
@@ -104,7 +104,7 @@ When creating a task, you can upload files that will be automatically saved to t
   </Step>
   
   <Step title="Start Task">
-    Press the arrow button or hit Enter. Bytebot will start loading and begin working on your task.
+    Press the arrow button or hit Enter. Spark will start loading and begin working on your task.
   </Step>
 </Steps>
 
@@ -160,7 +160,7 @@ Log into our banking portal and:
 2. Download all pending wire confirmations
 3. Match against our ERP payment records
 4. Flag any discrepancies in the reconciliation sheet
-(Bytebot handles all authentication including 2FA automatically via password manager)
+(Spark handles all authentication including 2FA automatically via password manager)
 ```
 
 #### Multi-Application Workflow
@@ -218,15 +218,15 @@ Tasks move through these states:
 
 #### Real-time Updates
 
-Watch Bytebot work through the task detail viewer:
+Watch Spark work through the task detail viewer:
 
 - **Green dot**: Task is actively running
 - **Status messages**: Current step being executed
-- **Desktop view**: See what Bytebot sees in real-time
+- **Desktop view**: See what Spark sees in real-time
 
 #### Chat Messages
 
-Bytebot provides updates like:
+Spark provides updates like:
 ```
 Assistant: I'm now searching for project management tools...
 Assistant: Found 15 options, filtering by your criteria...
@@ -303,7 +303,7 @@ Task 3: "Enter the amount into our accounting system"
 ```
 "Log into our banking portal, download all transaction files from last month, save them to the Finance/Statements folder, then run the reconciliation script on each file."
 
-(Note: Bytebot handles all authentication including 2FA automatically using the built-in password manager)
+(Note: Spark handles all authentication including 2FA automatically using the built-in password manager)
 
 "Access the vendor portal at supplier.example.com, navigate to the invoice section, download all pending invoices, extract the data into our standard template, and upload to the AP system."
 
@@ -410,7 +410,7 @@ Task 3: "Enter the amount into our accounting system"
 ### Learning from Tasks
 
 After each task:
-1. Review the approach Bytebot took
+1. Review the approach Spark took
 2. Note any inefficiencies
 3. Refine future task descriptions
 4. Build a library of effective prompts
@@ -427,5 +427,5 @@ After each task:
 </CardGroup>
 
 <Note>
-  **Pro Tip**: Start with simple tasks to understand Bytebot's capabilities, then gradually increase complexity as you learn what works best.
+  **Pro Tip**: Start with simple tasks to understand Spark's capabilities, then gradually increase complexity as you learn what works best.
 </Note>
