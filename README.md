@@ -6,7 +6,7 @@
 
 **An AI that has its own computer to complete tasks for you**
 
-[![License](https://img.shields.io/badge/license-Apache%202.0-green.svg)](LICENSE)
+[![License]([packages/bytebot-ui/public/sensus-spark.svg](https://github.com/sensuslab/sensus-spark/blob/main/packages/bytebot-ui/public/sensus-spark.svg)](LICENSE)
 
 </div>
 
