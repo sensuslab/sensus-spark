@@ -1,12 +1,12 @@
 <div align="center">
 
-<img src="docs/images/spark-logo.png" width="500" alt="Spark by Sensus Lab Logo">
+<img src="packages/bytebot-ui/public/sensus-spark.svg" width="500" alt="Spark by Sensus Lab Logo">
 
 # Spark by Sensus Lab: Open-Source AI Desktop Agent
 
 **An AI that has its own computer to complete tasks for you**
 
-[![License]([packages/bytebot-ui/public/sensus-spark.svg](https://github.com/sensuslab/sensus-spark/blob/main/packages/bytebot-ui/public/sensus-spark.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-Apache%202.0-green.svg)](LICENSE)
 
 </div>
 
@@ -62,19 +62,6 @@ Spark isn't limited to web interfaces. It can:
 - Configure applications for specific workflows
 
 ## Quick Start
-
-### Deploy in 2 Minutes
-
-**Option 1: Railway (Easiest)**
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/bytebot?referralCode=L9lKXQ)
-
-Just click and add your AI provider API key.
-
-**Option 2: Docker Compose**
-
-```bash
-git clone https://github.com/bytebot-ai/bytebot.git
-cd bytebot
 
 # Add your AI provider key (choose one)
 echo "ANTHROPIC_API_KEY=sk-ant-..." > docker/.env
